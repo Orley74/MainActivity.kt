@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Battle_map"
+    android:layout_width="match_parent"
+
+
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        tools:layout_editor_absoluteX="990dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/UserPanel"
+        android:layout_width="216dp"
+        android:layout_height="759dp"
+        android:background="@drawable/paneluztop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/magHel"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/magAttack"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+
+        <TextView
+            android:id="@+id/magAttack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EXPbar" />
+
+        <TextView
+            android:id="@+id/magDef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/magAttack"
+            app:layout_constraintStart_toStartOf="@+id/magAttack"
+            app:layout_constraintTop_toBottomOf="@+id/magAttack" />
+
+        <TextView
+            android:id="@+id/magInt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/magDef"
+            app:layout_constraintStart_toStartOf="@+id/magDef"
+            app:layout_constraintTop_toBottomOf="@+id/magDef" />
+
+        <TextView
+            android:id="@+id/magStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/magInt"
+            app:layout_constraintStart_toStartOf="@+id/magInt"
+            app:layout_constraintTop_toBottomOf="@+id/magInt" />
+
+        <TextView
+            android:id="@+id/magZr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/magStr"
+            app:layout_constraintStart_toStartOf="@+id/magStr"
+            app:layout_constraintTop_toBottomOf="@+id/magStr" />
+
+        <ProgressBar
+            android:id="@+id/HPbar"
+
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:foregroundTint="#FB8C00"
+            android:max="100"
+            android:progress="1"
+            android:progressTint="#FF0000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mag_stats" />
+
+        <TextView
+            android:id="@+id/mag_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mag_prof"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/mag_lvl"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/magWea"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="center"
+            app:layout_constraintEnd_toEndOf="@+id/magHel"
+            app:layout_constraintTop_toBottomOf="@+id/magHel"
+            app:srcCompat="@android:drawable/btn_default" />
+
+        <ImageView
+            android:id="@+id/magArmo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toStartOf="@+id/magWea"
+            app:layout_constraintTop_toBottomOf="@+id/magHel"
+            app:srcCompat="@android:drawable/gallery_thumb" />
+
+        <ImageView
+            android:id="@+id/magBoot"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="@+id/magWea"
+            app:layout_constraintTop_toBottomOf="@+id/magWea"
+            app:srcCompat="@android:drawable/picture_frame" />
+
+        <TextView
+            android:id="@+id/mag_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Statystyki"
+            app:layout_constraintStart_toStartOf="@+id/HPbar"
+            app:layout_constraintTop_toBottomOf="@+id/mag_lvl" />
+
+        <TextView
+            android:id="@+id/mag_lvl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/mag_name"
+            app:layout_constraintTop_toTopOf="@+id/mag_prof" />
+
+        <ProgressBar
+            android:id="@+id/EXPbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:progressTint="#FFE600"
+            app:layout_constraintEnd_toEndOf="@+id/HPbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HPbar" />
+
+        <ImageView
+            android:id="@+id/maskotka"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/archerimg"
+            app:layout_constraintBottom_toTopOf="@+id/magArmo"
+            app:layout_constraintEnd_toStartOf="@+id/magHel"
+            app:layout_constraintTop_toTopOf="@+id/magHel" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="52dp"
+            android:layout_height="18dp"
+            android:rotation="-29"
+            android:rotationX="-4"
+            android:rotationY="4"
+            android:src="@drawable/money"
+            app:layout_constraintStart_toEndOf="@+id/mag_stats"
+            app:layout_constraintTop_toTopOf="@+id/mag_stats" />
+
+        <TextView
+            android:id="@+id/chalwaCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/mag_prof" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/torba"
+        android:background="@drawable/paneluzbot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/UserPanel"
+        app:layout_constraintStart_toStartOf="@+id/UserPanel"
+        app:layout_constraintTop_toBottomOf="@+id/UserPanel">
+
+        <Button
+            android:id="@+id/walka"
+            android:layout_width="93dp"
+            android:layout_height="55dp"
+            android:backgroundTintMode="src_in"
+            android:text="Button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/maplayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:drawable/screen_background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/UserPanel"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/map"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/maskotka3"
+            android:layout_width="131dp"
+            android:layout_height="103dp"
+            android:rotationX="-13"
+            android:rotationY="8"
+            android:src="@drawable/archerimg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/magGoUp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="1dp"
+            android:backgroundTint="#F1EAEA"
+            app:layout_constraintBottom_toTopOf="@+id/magAction"
+            app:layout_constraintEnd_toEndOf="@+id/magAction"
+            app:layout_constraintStart_toStartOf="@+id/magAction"
+            app:srcCompat="@android:drawable/arrow_up_float"
+            app:tint="#090101" />
+
+        <ImageButton
+            android:id="@+id/magAction"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="1dp"
+            android:backgroundTint="#F1EAEA"
+            app:layout_constraintEnd_toStartOf="@+id/magGoRight"
+            app:layout_constraintTop_toBottomOf="@+id/magGoUp"
+            app:srcCompat="@android:drawable/presence_invisible"
+            app:tint="#090101" />
+
+        <ImageButton
+            android:id="@+id/magGoLeft"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#F1EAEA"
+            android:rotation="-90"
+            app:layout_constraintBottom_toBottomOf="@+id/magAction"
+            app:layout_constraintEnd_toStartOf="@+id/magAction"
+            app:layout_constraintTop_toBottomOf="@+id/magGoUp"
+            app:srcCompat="@android:drawable/arrow_up_float"
+            app:tint="#090101" />
+
+        <ImageButton
+            android:id="@+id/magGoRight"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#F1EAEA"
+            android:rotation="90"
+            android:rotationX="0"
+            app:layout_constraintBottom_toBottomOf="@+id/magAction"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/magAction"
+            app:srcCompat="@android:drawable/arrow_up_float"
+            app:tint="#090101" />
+
+        <ImageButton
+            android:id="@+id/magGoDown"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#F1EAEA"
+            android:rotationX="180"
+            android:rotationY="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/magAction"
+            app:layout_constraintTop_toBottomOf="@+id/magAction"
+            app:srcCompat="@android:drawable/arrow_up_float"
+            app:tint="#090101" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

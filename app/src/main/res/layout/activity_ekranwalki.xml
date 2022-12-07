@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+
+    tools:context=".ekranwalkiWojownik">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Battle_map"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/background"
+        android:rotationX="0"
+        android:src="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/panel"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageButton
+            android:id="@+id/player"
+            android:layout_width="191dp"
+            android:layout_height="175dp"
+            android:layout_marginBottom="4dp"
+            android:backgroundTint="#00FFFFFF"
+            android:rotationX="-29"
+            android:scaleType="fitStart"
+            android:scaleX="1"
+
+            android:src="@drawable/archerimg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/enemy1"
+            app:layout_constraintHorizontal_bias="0.345"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/enemy1"
+            style="@android:style/Widget.DeviceDefault.ImageButton"
+            android:layout_width="149dp"
+            android:layout_height="147dp"
+            android:layout_marginTop="172dp"
+            android:alpha="1"
+            android:backgroundTint="#00FFFFFF"
+            android:fitsSystemWindows="false"
+            android:rotationX="-29"
+            android:scaleType="centerCrop"
+            android:src="@drawable/enemywlow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.703"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/EnemyHP"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:progressTint="#FF0000"
+            app:layout_constraintBottom_toTopOf="@+id/enemy1"
+            app:layout_constraintEnd_toEndOf="@+id/enemy1"
+            app:layout_constraintStart_toStartOf="@+id/enemy1" />
+
+        <TextView
+            android:id="@+id/dmg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/EnemyHP"
+            app:layout_constraintEnd_toEndOf="@+id/EnemyHP"
+            app:layout_constraintHorizontal_bias="0.588"
+            app:layout_constraintStart_toStartOf="@+id/EnemyHP" />
+
+        <Button
+            android:id="@+id/AutoF"
+            android:layout_width="0dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#FA0000"
+            android:backgroundTintMode="add"
+            android:text="Auto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/Tura"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/Tura"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#F40202"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/player" />
+
+        <Button
+            android:id="@+id/exit"
+            android:layout_width="0dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="#FF0000"
+            android:text="Zakończ"
+            app:layout_constraintEnd_toEndOf="@+id/AutoF"
+            app:layout_constraintStart_toStartOf="@+id/AutoF"
+            app:layout_constraintTop_toBottomOf="@+id/AutoF"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tura:"
+            android:textColor="#FD0808"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/Tura"
+            app:layout_constraintTop_toTopOf="@+id/Tura" />
+
+        <TextView
+            android:id="@+id/winner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="wynik walki"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/exit"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/exit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/panel"
+        android:layout_width="232dp"
+        android:layout_height="0dp"
+        android:background="@drawable/paneluztop"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/maskotka2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/archerimg"
+            app:layout_constraintBottom_toTopOf="@+id/magArmo"
+            app:layout_constraintEnd_toStartOf="@+id/magHel"
+            app:layout_constraintStart_toStartOf="@+id/EXPbar"
+            app:layout_constraintTop_toTopOf="@+id/magHel" />
+
+        <TextView
+            android:id="@+id/mag_prof"
+            android:layout_width="83dp"
+            android:layout_height="17dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/mag_lvl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mag_lvl" />
+
+        <TextView
+            android:id="@+id/mag_lvl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/mag_name"
+            app:layout_constraintEnd_toStartOf="@+id/mag_prof"
+            app:layout_constraintTop_toTopOf="@+id/mag_name" />
+
+        <TextView
+            android:id="@+id/magStr"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/magInt"
+            app:layout_constraintStart_toStartOf="@+id/magInt"
+            app:layout_constraintTop_toBottomOf="@+id/magInt" />
+
+        <TextView
+            android:id="@+id/magZr"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/magStr"
+            app:layout_constraintStart_toStartOf="@+id/magStr"
+            app:layout_constraintTop_toBottomOf="@+id/magStr" />
+
+        <ImageView
+            android:id="@+id/magHel"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toEndOf="@+id/magWea"
+            app:layout_constraintTop_toBottomOf="@+id/magAttack"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+
+        <ImageView
+            android:id="@+id/magWea"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/magHel"
+            app:srcCompat="@android:drawable/btn_default" />
+
+        <ImageView
+            android:id="@+id/magBoot"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toEndOf="@+id/magWea"
+            app:layout_constraintTop_toBottomOf="@+id/magArmo"
+            app:srcCompat="@android:drawable/picture_frame" />
+
+        <ImageView
+            android:id="@+id/magArmo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/magHel"
+            app:layout_constraintStart_toEndOf="@+id/magWea"
+            app:layout_constraintTop_toBottomOf="@+id/magHel"
+            app:srcCompat="@android:drawable/gallery_thumb" />
+
+        <TextView
+            android:id="@+id/magAttack"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/EXPbar"
+            app:layout_constraintStart_toEndOf="@+id/magHel"
+            app:layout_constraintTop_toBottomOf="@+id/EXPbar" />
+
+        <TextView
+            android:id="@+id/magDef"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/magAttack"
+            app:layout_constraintStart_toStartOf="@+id/magAttack"
+            app:layout_constraintTop_toBottomOf="@+id/magAttack" />
+
+        <TextView
+            android:id="@+id/magInt"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/magDef"
+            app:layout_constraintStart_toStartOf="@+id/magDef"
+            app:layout_constraintTop_toBottomOf="@+id/magDef" />
+
+        <ProgressBar
+            android:id="@+id/HPbar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:foregroundTint="#FA0202"
+
+            android:max="100"
+            android:progress="1"
+            android:progressTint="#FF0000"
+            android:scrollbarStyle="outsideInset"
+            android:verticalScrollbarPosition="defaultPosition"
+            app:layout_constraintEnd_toEndOf="@+id/mag_prof"
+            app:layout_constraintStart_toStartOf="@+id/mag_name"
+            app:layout_constraintTop_toBottomOf="@+id/mag_stats" />
+
+        <TextView
+            android:id="@+id/mag_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Statystyki"
+            app:layout_constraintStart_toStartOf="@+id/mag_lvl"
+            app:layout_constraintTop_toBottomOf="@+id/mag_lvl" />
+
+        <TextView
+            android:id="@+id/mag_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintEnd_toStartOf="@+id/mag_lvl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/EXPbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:progressTint="#FFE600"
+            app:layout_constraintEnd_toEndOf="@+id/HPbar"
+            app:layout_constraintStart_toStartOf="@+id/HPbar"
+            app:layout_constraintTop_toBottomOf="@+id/HPbar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/torba"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/paneluzbot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/panel"
+        app:layout_constraintStart_toEndOf="@+id/Battle_map"
+        app:layout_constraintTop_toBottomOf="@+id/panel">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
